@@ -1,1 +1,1 @@
-const String url="https://api-cinex.herokuapp.com";
+const String url="https://cinex-api.herokuapp.com";
