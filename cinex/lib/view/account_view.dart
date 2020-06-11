@@ -104,7 +104,6 @@ class _AccountViewState extends State<AccountView> {
           _emailController.text = detailUser.email;
           _usernameController.text=detailUser.username;
           _walletController.text=detailUser.cPoint.toString();
-          print("hhhhh "+detailUser.email);
           return Container(
             margin: EdgeInsets.only(left: 10,right: 10),
             child: ListView(
@@ -214,6 +213,7 @@ class _AccountViewState extends State<AccountView> {
                 hintText: "Enter Your Name",
               ),
               controller: _usernameController,
+              style: TextStyle(color: Colors.white),
               enabled: false,),
           ),
         ],
@@ -231,6 +231,7 @@ class _AccountViewState extends State<AccountView> {
               decoration: const InputDecoration(
               ),
               controller: _walletController,
+              style: TextStyle(color: Colors.white),
               enabled: false,),
           ),
         ],
@@ -246,6 +247,7 @@ class _AccountViewState extends State<AccountView> {
           Expanded(
             child: TextField(
               controller: _emailController,
+              style: TextStyle(color: Colors.white),
               enabled: _update,
               autofocus: true,
               focusNode: myFocusNode,

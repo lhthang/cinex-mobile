@@ -3,7 +3,6 @@ import 'package:cinex/controller/movie_controller.dart';
 import 'package:cinex/controller/user_controller.dart';
 import 'package:cinex/model/movie.dart';
 import 'package:cinex/model/user.dart';
-import 'package:cinex/view/movie_detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:cinex/route/route_path.dart' as routes;
 

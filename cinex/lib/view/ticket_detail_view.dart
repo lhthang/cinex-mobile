@@ -2,7 +2,6 @@ import 'package:cinex/controller/ticket_controller.dart';
 import 'package:cinex/model/ticket/ticket.dart';
 import 'package:cinex/model/ticket/ticket_detail.dart';
 import 'package:cinex/utils/func.dart';
-import 'package:cinex/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 
