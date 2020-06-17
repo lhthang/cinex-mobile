@@ -232,7 +232,7 @@ class _MovieViewState extends State<MovieView>
                                 child: Container(),
                               ),
                               Expanded(
-                                flex: 10,
+                                flex: 9,
                                 child:ClipRRect(
                                     child: Image.network(
                                       movie.poster,
