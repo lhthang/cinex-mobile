@@ -1,5 +1,6 @@
 
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+import 'package:cinex/view/about_view.dart';
 import 'package:cinex/view/account_view.dart';
 import 'package:cinex/view/history_view.dart';
 import 'package:cinex/view/movie_view.dart';
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
     MovieView(),
     AccountView(),
     HistoryView(),
+    AboutView(),
   ];
 
   onTabTapped(int index) {
@@ -61,7 +63,13 @@ class _HomePageState extends State<HomePage> {
                     backgroundColor: Colors.white,
                     activeIcon: Image.asset('assets/icons/active_history.png', height: 25),
                     icon: Image.asset('assets/icons/history.png', height: 20),
-                    title: Text('Tickets History',style: new TextStyle(fontSize: 15),),
+                    title: Text('History',style: new TextStyle(fontSize: 15),),
+                  ),
+                  BubbleBottomBarItem(
+                    backgroundColor: Colors.white,
+                    activeIcon: Image.asset('assets/icons/about_active.png', height: 25),
+                    icon: Image.asset('assets/icons/about.png', height: 20),
+                    title: Text('About',style: new TextStyle(fontSize: 15),),
                   ),
                 ],
               ),
