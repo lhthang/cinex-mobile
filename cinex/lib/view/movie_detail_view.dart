@@ -201,7 +201,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
   _createDatePickerTimeline(){
     return DatePickerTimeline(
       selectedDate,
-      daysCount: 7,
+      daysCount: 14,
       onDateChange: (date) {
         // New date selected
         setState(() {

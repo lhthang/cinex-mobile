@@ -5,6 +5,7 @@ import 'package:cinex/model/summary_ticket.dart';
 import 'package:cinex/model/user.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cinex/dialog/dialog.dart' as dialog;
 import 'package:cinex/route/route_path.dart' as routes;
 
 class BookSeatView extends StatefulWidget {
@@ -173,9 +174,16 @@ class _BookSeatViewState extends State<BookSeatView> {
               fontSize: 15, fontWeight: FontWeight.w500)),
           onPressed: () async {
             List<String> tickets = _getSelectedTickets();
-            SummaryTickets summaryTickets = new SummaryTickets(tickets: tickets,showtime: detailShowtime);
-            await Navigator.of(context).pushNamed(routes.tickets,arguments: summaryTickets);
-            showtime = ShowtimeController.instance.getShowtimeById(widget.showtimeId);
+            if (tickets.length<=0){
+              dialog.showErrorMessage(
+                          context, "Error", "You don't select any seats").show();
+                    
+            }else{
+              SummaryTickets summaryTickets = new SummaryTickets(tickets: tickets,showtime: detailShowtime);
+              await Navigator.of(context).pushNamed(routes.tickets,arguments: summaryTickets);
+              showtime = ShowtimeController.instance.getShowtimeById(widget.showtimeId);
+            }
+            
           },
         ),
       ),
