@@ -27,8 +27,8 @@ class ReportController {
     var body = json.encode(data);
     String token = await store.get("token");
     final response = await http.post('$url/reports',body: body,headers: createHeaderWithAuth(token));
-    print(response.statusCode);
     if (response.statusCode == 200) {
+      print(response.body);
       reports = SystemReport.fromJson(json.decode(response.body));
       return reports;
     }
