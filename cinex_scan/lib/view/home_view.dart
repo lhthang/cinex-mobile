@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Container(margin: EdgeInsets.all(10),child: Text(message),), renderScanButton()],
+          children: <Widget>[Text(message), renderScanButton()],
         ),
       ),
       floatingActionButton: FloatingActionButton(
